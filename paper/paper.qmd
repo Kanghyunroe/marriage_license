@@ -1,12 +1,12 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Marriage Data: A Temporal Analysis"
+subtitle: "Marriage Licenses Over Time"
 author: 
   - Kevin Roe
-thanks: "Code and data are available at: LINK."
+thanks: "Code and data are available at: https://github.com/Kanghyunroe/marriage_license"
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "The paper analyzes the number of marriage licenses over time. Using R, we analyze the data and found no key insights worth analyzing."
 format: pdf
 number-sections: true
 bibliography: references.bib
@@ -18,6 +18,7 @@ bibliography: references.bib
 #| message: false
 
 library(tidyverse)
+library(tinytex)
 
 data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
 
@@ -26,15 +27,11 @@ data <- read_csv(here::here("data/analysis_data/analysis_data.csv"))
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. We use @talia, @opendatatorotno, and @rohan.
-
-The remainder of this paper is structured as follows. @sec-mydatasection
-
+The paper analyzes marriage license data sourced from Open Data Toronto [@opendatatoronto]. We used R [@R] to analyze the data.The graph plots the number of marriage licenses filled for each date. From my initial analysis, there doesn't seem to be a clear pattern to analyze and shows some problems I have with the data set. 
 
 
 # Data {#sec-mydatasection}
 
-Some of our data is of penguins (@fig-marriage), from @palmerpenguins.
 
 ```{r}
 #| label: fig-marriage
@@ -47,19 +44,11 @@ data |>
 
 ```
 
-Talk more about it.
-
-And also planes (@fig-planes). (You can change the height and width, but don't worry about doing that until you have finished every other aspect of the paper - Quarto will try to make it look nice and the defaults usually work well once you have enough text.)
-
-
-
 
 
 # Discussion
 
 ## First discussion point {#sec-first-point}
-
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
 
 ## Second discussion point
 
